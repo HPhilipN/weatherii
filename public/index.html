@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="Weather App Ver. 2"
+      content="Web app that provides weather forecast and time zone based on city/country inputs"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -24,9 +24,45 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Forecast Yoinker II</title>
   </head>
   <body>
+    <div class="app-wrap">
+      <header>
+        <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+      </header>
+      <main>
+        <div id="Forecast_panels"></div>
+        <section class="location">
+          <div class="city">Vancouver, CA</div>
+          <div class="date">Thursday 30 June 2022</div>
+        </section>
+        <div class="current">
+          <div class="temp">15<span>°c</span></div>
+          <div class="weather">Sunny</div>
+          <div class="hi-low">13°c / 16°c</div>
+        </div>
+        <section class="time">
+
+
+
+          <div class="twelve_hour">
+              5:10:32 <span class="time-state">PM</span>
+              <span class="timezone"> PST</span>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+          </div>
+          <div class="twentyfour">
+              17:10:32
+          </div>
+      </section>
+      </main>
+    </div>
+    <div class=>
+      
+    </div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
