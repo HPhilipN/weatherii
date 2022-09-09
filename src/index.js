@@ -11,6 +11,8 @@ const api = {
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
 
+const slider = document.querySelector('.checkbox');
+slider.addEventListener('click', setQuery);
 function setQuery(evt) {
   if (evt.keyCode == 13) {
     getResults(searchbox.value);
@@ -53,3 +55,10 @@ function dateBuilder (d) {
 
   return `${day} ${date} ${month} ${year}`;
 }
+
+/*function toggletime (event){
+  if(event.checkbox){
+
+  }
+}*/
+
