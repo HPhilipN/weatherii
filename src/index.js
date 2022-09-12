@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-
-const api = {
+const api_forecast = {
   key: "7ba9aae10b8921577465d3fe25ba5d59",
-  base: "https://api.openweathermap.org/data/2.5/"
+  base: "https://api_forecast.openweathermap.org/data/2.5/"
 }
-
+/*
+const api_time = {
+  key: "I8VYN3XIQGHY", 
+  base: "http://api.timezonedb.com"
+}
+*/
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
 
@@ -20,12 +24,14 @@ function setQuery(evt) {
 }
 
 function getResults (query) {
-  fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+  fetch(`${api_forecast.base}weather?q=${query}&units=metric&APPID=${api_forecast.key}`)
     .then(weather => {
       return weather.json();
     }).then(displayResults);
 }
+////function get_Time (query) {
 
+//}
 function displayResults (weather) {
   let city = document.querySelector('.location .city');
   city.innerText = `${weather.name}, ${weather.sys.country}`;

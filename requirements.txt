@@ -1,0 +1,14 @@
+
+TO-DO LIST:
+
+4 days of weather information 
+    Should Display: 
+        Weather
+        Temperature
+        City
+        Country
+
+
+Additional Features
+    Advanced details switch
+    Toggle 12-hr/24-hr time Switch 
